@@ -1,13 +1,24 @@
-import { Outlet} from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
+import { Fragment } from 'react'
+// import { ReactComponent as Toyota} from 
+import logo from '../../../assets/crown.svg'
+import './navigation.styles.scss'
 
 const Navigation = () => {
     return(
-      <div>
-        <div>
-          <h1>I am the naviagation bar</h1>
+      <Fragment>
+        <div className='navigation'>
+            <Link className='logo-container' to='/'>
+          <img src = {logo} className='logo' />
+          </Link>
+          <div className='nav-links-container'>
+            <Link className='nav-link' to='/shop'>
+                SHOP
+            </Link>
+          </div>
         </div>
         <Outlet />
-      </div>
+      </Fragment>
     )
   }
 export default Navigation  
