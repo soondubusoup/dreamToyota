@@ -24,4 +24,4 @@ const Navigation = () => {
       </Fragment>
     )
   }
-export default Navigation  
+export default Navigation;
